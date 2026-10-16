@@ -154,7 +154,7 @@ export default function HomePage() {
           ) : <div className="empty-state"><span className="empty-icon"><Newspaper size={22} /></span><strong>No stories match those filters.</strong><p>Try another search or bring all sources back into view.</p><button onClick={() => { setQuery(''); setSelectedSources([]); }}>Reset filters</button></div>}
         </section>
 
-        <footer className="page-footer"><span>STORYLINE <b>·</b> A clearer view of the day</span><span>Sources: {sources.map((source) => source.name).join(' · ') || '—'}</span></footer>
+        <footer className="page-footer"><span>STORYLINE <b>·</b> A clearer view of the day</span><span>Sources: {sources.map((source) => source.name).join(' · ') || '—'}</span><span>Created by Lakshay Narula</span></footer>
       </div>
       <ClusterModal clusterId={selectedCluster} onClose={() => setSelectedCluster(null)} />
     </main>
