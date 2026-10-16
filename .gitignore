@@ -1,0 +1,28 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Preserve the former standalone frontend repository locally, but do not upload it
+frontend/.git-frontend-backup/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+scraper/news_pulse.db*
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+*.tsbuildinfo
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

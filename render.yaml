@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: storyline-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: PYTHON_CMD
+        value: /app/.venv/bin/python
+      - key: SCRAPER_PATH
+        value: /app/scraper/pipeline.py
